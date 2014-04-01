@@ -1,10 +1,16 @@
-# Cached Counts
+# Cached Counts in Apartment changes
+Added multi tenancy support.
 
+Works with gem for multiple tenants in your Rails application [apartment](https://github.com/influitive/apartment).
+
+
+# Cached Counts
 Performing `COUNT(*)` operations in relational databases can get slow for large sets of data. There are already existing ways to deal with improving counting performance and techniques to avoid doing it altogether.
 
 This gem adds caching support to the `ActiveRecord::Relation` class to allow repeated count calls to be cached. Counts are cached based on the query that is to be run and cleared when records are saved or destroyed.
 
 Cached counts works well with tables that are large and have many more selects than inserts. You will see *some* benefits even in tables that have regular inserts, but the gains will not be as great.
+
 
 
 ## Installation
