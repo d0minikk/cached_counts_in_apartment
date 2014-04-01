@@ -1,7 +1,7 @@
 # Cached Counts in Apartment changes
 Added multi tenancy support.
 
-Works with gem for multiple tenants in your Rails application [apartment](https://github.com/influitive/apartment).
+Works with gem for multiple tenants in your Rails application - [apartment](https://github.com/influitive/apartment).
 
 
 # Cached Counts
