@@ -43,7 +43,7 @@ module CachedCounts
     end
 
     def current_key
-      "#{@current_tenant unless @current_tenant.nil? }::cached_counts::#{@scope.to_sql.downcase}::#{@args}"
+      "#{@current_tenant unless @current_tenant.nil?}::cached_counts::#{@scope.to_sql.downcase}::#{@args}"
     end
   end
 end
