@@ -3,6 +3,7 @@ module CachedCounts
     def initialize(scope)
       @scope = scope
       @args  = []
+      @current_tenant = Apartment::Database.current if defined?(Apartment::Database)
     end
 
     def count(*args)
@@ -42,7 +43,7 @@ module CachedCounts
     end
 
     def current_key
-      "cached_counts::#{@scope.to_sql.downcase}::#{@args}"
+      "#{@current_tenant unless @current_tenant.nil? }::cached_counts::#{@scope.to_sql.downcase}::#{@args}"
     end
   end
 end
